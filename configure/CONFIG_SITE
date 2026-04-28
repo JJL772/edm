@@ -1,0 +1,26 @@
+# $Id$
+#
+# Make any extensions-specific changes to the EPICS build
+# configuration variables in this file.
+#
+# Host/target specific settings are in os subdirectory files named
+#  os/CONFIG_SITE.$(EPICS_HOST_ARCH).Common
+#  os/CONFIG_SITE.Common.$(T_A)
+#  os/CONFIG_SITE.$(EPICS_HOST_ARCH).$(T_A)
+
+# Extensions are not normally built for cross targets
+CROSS_COMPILER_TARGET_ARCHS =
+
+# If you don't want to install into $(TOP) then
+# define INSTALL_LOCATION here
+#INSTALL_LOCATION=<fullpathname>
+
+# Extensions don't normally build shared libraries
+SHARED_LIBRARIES = NO
+
+# These allow developers to override the CONFIG_SITE variable
+# settings without having to modify the configure/CONFIG_SITE
+# file itself.
+-include $(TOP)/../CONFIG_SITE.local
+-include $(TOP)/configure/CONFIG_SITE.local
+

@@ -1,0 +1,12 @@
+EPICS_BASE=$(EPICS_SITE_TOP)/base
+SUPPORT=
+
+
+RELEASE=$(EPICS_MODULES)/release
+EPICS_EXTENSIONS=$(EPICS_MODULES)/epics_extensions
+EPICS_EXTENSIONS=$(EPICS_MODULES)/epics_extensions
+OAG_APPS=$(EPICS_MODULES)/oag_apps
+
+-include $(TOP)/../RELEASE_SITE
+-include $(TOP)/../../RELEASE_SITE
+-include $(TOP)/RELEASE_SITE
